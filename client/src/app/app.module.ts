@@ -7,6 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { ChatsListerModule } from './chats-lister/chats-lister.module';
+
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -14,9 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    // Routing
+    RouterModule.forRoot(routes),
+    // Feature modules
+    ChatsListerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
