@@ -5,6 +5,9 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "graphql": "^14.0.2",
+    "graphql-code-generator": "^0.14.2",
+    "graphql-codegen-typescript-common": "^0.14.2",
+    "graphql-codegen-typescript-template": "^0.14.2",
     "moment": "^2.22.2"
   },
   "devDependencies": {
@@ -27,6 +30,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon -L",
-    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts"
+    "start": "nodemon --exec ./node_modules/.bin/ts-node -- ./index.ts",
+    "generator": "gql-gen "
   }
 }
